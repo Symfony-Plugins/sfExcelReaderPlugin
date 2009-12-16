@@ -1,0 +1,3 @@
+#sfExcelReaderExample:
+#  url:   /sfExcelReaderExample/
+#  param: { module: sfExcelReaderExample, action: index }
