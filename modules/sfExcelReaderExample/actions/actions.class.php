@@ -17,7 +17,6 @@ class sfExcelReaderExampleActions extends sfActions
   public function executeIndex(sfWebRequest $request)
   {
     error_reporting(E_ALL ^ E_NOTICE);
-    require_once 'excel_reader2.php';
-    $this->data = new Spreadsheet_Excel_Reader("example.xls");
+    $this->data = new sfExcelReader(sfConfig::get('sf_root_dir').'plugins/sfExcelReader/data/example.xls');
   }
 }
