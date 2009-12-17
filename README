@@ -9,32 +9,43 @@ Installation
 
 Install the plugin via the subversion repository:
 
-    $ svn co http://svn.symfony-project.com/plugins/sfApplicationMapPlugin/trunk plugins/sfApplicationMapPlugin
+    $ svn co http://svn.symfony-project.com/plugins/sfExcelReaderPlugin/trunk plugins/sfExcelReaderPlugin
 
 from the project root directory or by using the command:
 
-    $ ./symfony plugin:install sfApplicationMapPlugin
+    $ ./symfony plugin:install sfExcelReaderPlugin
 
 Usage
 =====
 
-Simply type the following command:
+Here is an easy example of using PHP Excel Reader:
 
-    $ ./symfony project:application-map
+    [php]
+    $data = new sfExcelReader('example.xls');
+    echo $data->dump(true, true);
 
-which creates few files under the _doc/graph_ directory:
+To find out more features, please lok at the documentation of PHP Excel Reader.
 
-  *   __application-map.dot__ - source graphviz file for all image files
+sfGeshiExample
+==============
 
-and alternative images of application map:
+The plugin is provided with an example module to test if everything works
+fine. Right after installation, go to your application _config_ directory
+and add _sfExcelReaderExample_ module to _enabled modules_ section in
+_settings.yml_ file. Next step is to edit _config/routing.yml_ file of the
+plugin - you shall uncomment all lines. Then clear the cache:
 
-  *   __application-map.dot.png__ : image created by __dot__ command
-  *   __application-map.neato.png__ : image created by __neato__ command
-  *   __application-map.twopi.png__ : image created by __twopi__ command
-  *   __application-map.circo.png__ : image created by __circo__ command
-  *   __application-map.fdp.png__ : image created by __fdp__ command
+   $ ./symfony cc
 
-Prerequisites
+and everything is ready to run:
+
+    http://local.site/excel
+
+in your browser. You shall see a demonstration of both interpreting and
+correct displaying of xls file.
+
+Documentation
 =============
 
-  * You must have __graphviz__ installed on your system.
+Documentation of PHP Excel Reader is available
+[here](http://code.google.com/p/php-excel-reader/wiki/Documentation).
