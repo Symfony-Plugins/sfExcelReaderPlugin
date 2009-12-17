@@ -32,7 +32,7 @@ Here is an easy example of using PHP Excel Reader:
 
 To find out more features, please lok at the documentation of PHP Excel Reader.
 
-sfGeshiExample
+sfExcelReaderExample
 ==============
 
 The plugin is provided with an example module to test if everything works
