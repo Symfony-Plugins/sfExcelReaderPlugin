@@ -1,3 +1,3 @@
 <h1>Excel reader test</h1>
 
-<?php echo $data->dump(true, true); ?>
+<?php echo $sf_data->getRaw('data')->dump(true, true); ?>
