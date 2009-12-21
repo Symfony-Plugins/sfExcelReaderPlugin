@@ -42,7 +42,7 @@ and add _sfExcelReaderExample_ module to _enabled modules_ section in
 _settings.yml_ file. Next step is to edit _config/routing.yml_ file of the
 plugin - you shall uncomment all lines. Then clear the cache:
 
-   $ ./symfony cc
+    $ ./symfony cc
 
 and everything is ready to run:
 
